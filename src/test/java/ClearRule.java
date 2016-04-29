@@ -5,5 +5,6 @@ public class ClearRule extends ExternalResource {
 
   protected void after() {
     Dictionary.clear();
+    Word.clear();
   }
 }
