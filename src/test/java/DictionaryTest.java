@@ -41,4 +41,13 @@ public class DictionaryTest {
     Dictionary secondWord = new Dictionary("Computer");
     assertEquals(Dictionary.find(secondWord.getId()), secondWord);
   }
+  @Test
+  public void find_returnsNullWhenDictionaryWordNotFound_Null() {
+    assertTrue(Dictionary.find(999) == null);
+  }
+  @Test
+  public void getWords_initiallyReturnsEmptyList_ArrayList() {
+    Dictionary testDictionary = new Dictionary("Example");
+    assertEquals(0, testDictionary.getWords().size());
+  }
 }

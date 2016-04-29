@@ -4,11 +4,13 @@ public class Dictionary {
   private String mWord;
   private static ArrayList<Dictionary> dictionaryArray = new ArrayList<Dictionary>();
   private int mId;
+  private ArrayList<Word> mWordDefinition;
 
   public Dictionary(String word) {
     mWord = word;
     dictionaryArray.add(this);
     mId = dictionaryArray.size();
+    mWordDefinition = new ArrayList<Word>();
   }
   public String getWord() {
     return mWord;
@@ -28,5 +30,8 @@ public class Dictionary {
     } catch (IndexOutOfBoundsException e) {
       return null;
     }
+  }
+    public ArrayList<Word> getWords() {
+      return mWordDefinition;
   }
 }
