@@ -49,4 +49,8 @@ public class WordTest {
     Word secondDefinition = new Word("example definition two");
     assertEquals(Word.find(secondDefinition.getId()), secondDefinition);
   }
+  @Test
+  public void find_returnsNullWhenNoWordDefinitionFound_null() {
+    assertTrue(Word.find(999) == null);
+  }
 }
