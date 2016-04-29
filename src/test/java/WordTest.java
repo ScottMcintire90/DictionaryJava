@@ -14,4 +14,14 @@ public class WordTest {
     Word testDefinition = new Word("example definition");
     assertEquals("example definition", testDefinition.getDefinition());
   }
+  @Test
+  public void isCompleted_isFalseAfterInstantiation_false() {
+    Word testDefinition = new Word("example definition");
+    assertEquals(false, testDefinition.isCompleted());
+  }
+  @Test
+  public void getCreatedAt_instantiatesWithCurrentTime_today() {
+    Word testDefinition = new Word("example definition");
+    assertEquals(LocalDateTime.now().getDayOfWeek(), testDefinition.getCreatedAt().getDayOfWeek());
+  }
 }
