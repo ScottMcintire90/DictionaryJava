@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="DictionaryTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2016-04-29T16:25:32" hostname="Thes-iMac.local" time="0.002">
+<testsuite name="DictionaryTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2016-04-29T16:31:29" hostname="Thes-iMac.local" time="0.002">
   <properties/>
   <testcase name="dictionary_returnsNewWordName_Word" classname="DictionaryTest" time="0.002"/>
   <testcase name="dictionary_instantiatesCorrectly_true" classname="DictionaryTest" time="0.0"/>
+  <testcase name="dictionary_returnsAllInstancesOfDictionary_True" classname="DictionaryTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

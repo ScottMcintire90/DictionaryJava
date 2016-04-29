@@ -17,4 +17,11 @@ public class DictionaryTest {
     Dictionary testDictionary = new Dictionary("Example");
     assertEquals("Example", testDictionary.getWord());
   }
+  @Test
+  public void dictionary_returnsAllInstancesOfDictionary_True() {
+    Dictionary firstWord = new Dictionary("Example");
+    Dictionary secondWord = new Dictionary("Computer");
+    assertTrue(Dictionary.getDictionary().contains(firstWord));
+    assertTrue(Dictionary.getDictionary().contains(secondWord));
+  }
 }
