@@ -6,4 +6,8 @@ public class Word {
   public Word(String definition) {
     mDefinition = definition;
   }
+
+  public String getDefinition() {
+    return mDefinition;
+  }
 }
