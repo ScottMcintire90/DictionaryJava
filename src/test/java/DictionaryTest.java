@@ -13,15 +13,21 @@ public class DictionaryTest {
     assertEquals(true, testDictionary instanceof Dictionary);
   }
   @Test
-  public void dictionary_returnsNewWordName_Word() {
+  public void getWord_returnsNewWordName_Word() {
     Dictionary testDictionary = new Dictionary("Example");
     assertEquals("Example", testDictionary.getWord());
   }
   @Test
-  public void dictionary_returnsAllInstancesOfDictionary_True() {
+  public void getDictionary_returnsAllInstancesOfDictionary_True() {
     Dictionary firstWord = new Dictionary("Example");
     Dictionary secondWord = new Dictionary("Computer");
     assertTrue(Dictionary.getDictionary().contains(firstWord));
     assertTrue(Dictionary.getDictionary().contains(secondWord));
+  }
+  @Test
+  public void clear_emptiesAllDictionaryWords_0() {
+    Dictionary testDictionary = new Dictionary("Example");
+    Dictionary.clear();
+    assertEquals(Dictionary.getDictionary().size(), 0);
   }
 }

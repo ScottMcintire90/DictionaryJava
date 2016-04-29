@@ -16,4 +16,8 @@ public class Dictionary {
   public static ArrayList<Dictionary> getDictionary() {
     return dictionaryArray;
   }
+
+  public static void clear() {
+    dictionaryArray.clear();
+  }
 }
