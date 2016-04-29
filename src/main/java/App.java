@@ -28,17 +28,22 @@ public class App {
       HashMap<String, Object> model = new HashMap<String, Object>();
       Word newWord = Word.find(Integer.parseInt(request.params(":id")));
       model.put("newWord", newWord);
+      model.put("definitions", newWord.getDefinitions());
       model.put("template", "templates/word.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
     post("/word/:id", (request, response) -> {
       HashMap<String, Object> model = new HashMap<String, Object>();
+      Word newWord = Word.find(Integer.parseInt(request.queryParams("wordId")));
+
       String definition = request.queryParams("newDefinition");
       Definition newDefinition = new Definition(definition);
-      Word newWord = Word.find(Integer.parseInt(request.params(":id")));
+
       newWord.addDefinition(newDefinition);
-      model.put("newDefinition", newDefinition);
+
+      model.put("definitions", newWord.getDefinitions());
+
       model.put("newWord", newWord);
       model.put("template", "templates/word.vtl");
       return new ModelAndView(model, layout);
