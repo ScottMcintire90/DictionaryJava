@@ -51,10 +51,10 @@ public class WordTest {
     assertEquals(0, testWord.getDefinitions().size());
   }
   @Test
-  public void addWord_addsWordToList_true() {
+  public void addDefinition_addsDefinitionToList_true() {
     Word testWord = new Word("Example");
     Definition testDefinition = new Definition("Example definition.");
-    testWord.addWord(testWord);
-    assertTrue(testWord.getDefinitions().contains(testWord));
+    testWord.addDefinition(testDefinition);
+    assertTrue(testWord.getDefinitions().contains(testDefinition));
   }
 }
