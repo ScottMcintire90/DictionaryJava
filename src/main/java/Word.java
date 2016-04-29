@@ -1,44 +1,40 @@
 import java.util.ArrayList;
-import java.time.LocalDateTime;
 
 public class Word {
-  private String mDefinition;
-  private boolean mCompleted;
-  private LocalDateTime mCreatedAt;
-  private static ArrayList<Word> instances = new ArrayList<Word>();
+  private String mWord;
+  private static ArrayList<Word> wordArray = new ArrayList<Word>();
   private int mId;
+  private ArrayList<Word> mWordDefinition;
 
-  public Word(String definition) {
-    mDefinition = definition;
-    mCompleted = false;
-    mCreatedAt = LocalDateTime.now();
-    instances.add(this);
-    mId = instances.size();
+  public Word(String word) {
+    mWord = word;
+    wordArray.add(this);
+    mId = wordArray.size();
+    mWordDefinition = new ArrayList<Word>();
   }
-
-  public String getDefinition() {
-    return mDefinition;
+  public String getWord() {
+    return mWord;
   }
-  public boolean isCompleted() {
-    return mCompleted;
-  }
-  public LocalDateTime getCreatedAt() {
-    return mCreatedAt;
-  }
-  public static ArrayList<Word> all() {
-    return instances;
+  public static ArrayList<Word> getWords() {
+    return wordArray;
   }
   public static void clear() {
-    instances.clear();
+    wordArray.clear();
   }
   public int getId() {
     return mId;
   }
   public static Word find(int id) {
     try {
-      return instances.get(id - 1);
+      return wordArray.get(id - 1);
     } catch (IndexOutOfBoundsException e) {
       return null;
     }
+  }
+    public ArrayList<Word> getDefinitions() {
+      return mWordDefinition;
+  }
+  public void addWord(Word definition) {
+    mWordDefinition.add(definition);
   }
 }

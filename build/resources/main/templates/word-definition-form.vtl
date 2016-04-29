@@ -1,0 +1,12 @@
+<div class="container">
+  <h1>Add a definition to $dictionary.getWord()</h1>
+
+  <form action="/word" method="post">
+    <input id="newDefinition" name="newDefinition" type="hidden" value="$dictionary.getId()">
+    <div class="form-group">
+      <label for="definition">Definition:</label>
+      <input id="definition" name="definition" type="text" class="form-control">
+    </div>
+    <button type="submit" class="btn">Add definition</button>
+  </form>
+</div>

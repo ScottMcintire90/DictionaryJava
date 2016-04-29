@@ -1,56 +1,60 @@
-import java.time.LocalDateTime;
 import org.junit.*;
 import static org.junit.Assert.*;
 
 public class WordTest {
+  @After
+  public void tearDown() {
+    Word.clear();
 
+  }
   @Test
   public void word_instantiatesCorrectly_true() {
-    Word testDefinition = new Word("example definition");
-    assertEquals(true, testDefinition instanceof Word);
+    Word testWord = new Word("Example");
+    assertEquals(true, testWord instanceof Word);
   }
   @Test
-  public void word_instantiatesWithDefinition_String() {
-    Word testDefinition = new Word("example definition");
-    assertEquals("example definition", testDefinition.getDefinition());
+  public void getWord_returnsNewWordName_Word() {
+    Word testWord = new Word("Example");
+    assertEquals("Example", testWord.getWord());
   }
   @Test
-  public void isCompleted_isFalseAfterInstantiation_false() {
-    Word testDefinition = new Word("example definition");
-    assertEquals(false, testDefinition.isCompleted());
+  public void getWord_returnsAllInstancesOfWord_True() {
+    Word firstWord = new Word("Example");
+    Word secondWord = new Word("Computer");
+    assertTrue(Word.getWords().contains(firstWord));
+    assertTrue(Word.getWords().contains(secondWord));
   }
   @Test
-  public void getCreatedAt_instantiatesWithCurrentTime_today() {
-    Word testDefinition = new Word("example definition");
-    assertEquals(LocalDateTime.now().getDayOfWeek(), testDefinition.getCreatedAt().getDayOfWeek());
-  }
-  @Test
-  public void all_returnsAllInstancesOfWord_true() {
-    Word firstDefinition = new Word("example definition");
-    Word secondDefinition = new Word("example definition two");
-    assertTrue(Word.all().contains(firstDefinition));
-    assertTrue(Word.all().contains(secondDefinition));
-  }
-  @Test
-  public void clear_emptiesAllWordDefinitionsFromArrayList_0() {
-    Word testDefinition = new Word("example definition");
+  public void clear_emptiesAllWordWords_0() {
+    Word testWord = new Word("Example");
     Word.clear();
-    assertEquals(Word.all().size(), 0);
+    assertEquals(Word.getWords().size(), 0);
   }
   @Test
-  public void getId_wordDefinitionsInstantiatesWithAnId_1() {
-    Word.clear();
-    Word testDefinition = new Word("example definition");
-    assertEquals(1, testDefinition.getId());
+  public void getId_wordInstantiatesWithAnId_1() {
+    Word testWord = new Word("Example");
+    assertEquals(1, testWord.getId());
   }
   @Test
-  public void find_returnsWordDefinitionsWithSameId_secondDefinition() {
-    Word firstDefinition = new Word("example definition");
-    Word secondDefinition = new Word("example definition two");
-    assertEquals(Word.find(secondDefinition.getId()), secondDefinition);
+  public void find_returnsWordWithSameId_secondWord() {
+    Word firstWord = new Word("Example");
+    Word secondWord = new Word("Computer");
+    assertEquals(Word.find(secondWord.getId()), secondWord);
   }
   @Test
-  public void find_returnsNullWhenNoWordDefinitionFound_null() {
+  public void find_returnsNullWhenWordNotFound_Null() {
     assertTrue(Word.find(999) == null);
+  }
+  @Test
+  public void getWords_initiallyReturnsEmptyList_ArrayList() {
+    Word testWord = new Word("Example");
+    assertEquals(0, testWord.getDefinitions().size());
+  }
+  @Test
+  public void addWord_addsWordToList_true() {
+    Word testWord = new Word("Example");
+    Definition testDefinition = new Definition("Example definition.");
+    testWord.addWord(testWord);
+    assertTrue(testWord.getDefinitions().contains(testWord));
   }
 }

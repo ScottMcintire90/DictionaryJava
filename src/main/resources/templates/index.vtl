@@ -13,7 +13,7 @@
     <h3>My Words:</h3>
     <ul>
       #foreach($dictionary in $words)
-        <li>$dictionary.getWord()</li>
+        <li><a href="/word/$dictionary.getId()">$dictionary.getWord()</a></li>
       #end
     </ul>
   </div>
