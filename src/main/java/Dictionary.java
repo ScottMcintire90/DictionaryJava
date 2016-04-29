@@ -22,5 +22,11 @@ public class Dictionary {
   public int getId() {
     return mId;
   }
-
+  public static Dictionary find(int id) {
+    try {
+      return dictionaryArray.get(id - 1);
+    } catch (IndexOutOfBoundsException e) {
+      return null;
+    }
+  }
 }

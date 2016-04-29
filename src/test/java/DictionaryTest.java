@@ -35,4 +35,10 @@ public class DictionaryTest {
     Dictionary testDictionary = new Dictionary("Example");
     assertEquals(1, testDictionary.getId());
   }
+  @Test
+  public void find_returnsDictionaryWordWithSameId_secondWord() {
+    Dictionary firstWord = new Dictionary("Example");
+    Dictionary secondWord = new Dictionary("Computer");
+    assertEquals(Dictionary.find(secondWord.getId()), secondWord);
+  }
 }
