@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 public class DictionaryTest {
   @After
   public void tearDown() {
-    // Dictionary.clear();
+    Dictionary.clear();
 
   }
   @Test
@@ -29,5 +29,10 @@ public class DictionaryTest {
     Dictionary testDictionary = new Dictionary("Example");
     Dictionary.clear();
     assertEquals(Dictionary.getDictionary().size(), 0);
+  }
+  @Test
+  public void getId_dictionaryWordsInstantiatesWithAnId_1() {
+    Dictionary testDictionary = new Dictionary("Example");
+    assertEquals(1, testDictionary.getId());
   }
 }
