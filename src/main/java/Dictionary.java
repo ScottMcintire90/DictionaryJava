@@ -34,4 +34,7 @@ public class Dictionary {
     public ArrayList<Word> getWords() {
       return mWordDefinition;
   }
+  public void addWord(Word definition) {
+    mWordDefinition.add(definition);
+  }
 }

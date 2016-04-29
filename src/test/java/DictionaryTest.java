@@ -50,4 +50,11 @@ public class DictionaryTest {
     Dictionary testDictionary = new Dictionary("Example");
     assertEquals(0, testDictionary.getWords().size());
   }
+  @Test
+  public void addWord_addsWordToList_true() {
+    Dictionary testDictionary = new Dictionary("Example");
+    Word testWord = new Word("a thing characteristic of its kind or illustrating a general rule.");
+    testDictionary.addWord(testWord);
+    assertTrue(testDictionary.getWords().contains(testWord));
+  }
 }
