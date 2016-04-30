@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="DefinitionTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2016-04-29T22:47:19" hostname="Thes-iMac.local" time="0.058">
+<testsuite name="DefinitionTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2016-04-30T00:07:38" hostname="Thes-iMac.local" time="0.022">
   <properties/>
-  <testcase name="find_returnsNullWhenNoDefinitionDefinitionFound_null" classname="DefinitionTest" time="0.001"/>
-  <testcase name="find_returnsDefinitionDefinitionsWithSameId_secondDefinition" classname="DefinitionTest" time="0.056"/>
+  <testcase name="find_returnsNullWhenNoDefinitionDefinitionFound_null" classname="DefinitionTest" time="0.0"/>
+  <testcase name="find_returnsDefinitionDefinitionsWithSameId_secondDefinition" classname="DefinitionTest" time="0.021"/>
   <testcase name="word_instantiatesWithDefinition_String" classname="DefinitionTest" time="0.0"/>
   <testcase name="all_returnsAllInstancesOfDefinition_true" classname="DefinitionTest" time="0.0"/>
   <testcase name="clear_emptiesAllDefinitionDefinitionsFromArrayList_0" classname="DefinitionTest" time="0.0"/>
-  <testcase name="getCreatedAt_instantiatesWithCurrentTime_today" classname="DefinitionTest" time="0.001"/>
+  <testcase name="getCreatedAt_instantiatesWithCurrentTime_today" classname="DefinitionTest" time="0.0"/>
   <testcase name="isCompleted_isFalseAfterInstantiation_false" classname="DefinitionTest" time="0.0"/>
   <testcase name="getId_wordDefinitionsInstantiatesWithAnId_1" classname="DefinitionTest" time="0.0"/>
   <testcase name="word_instantiatesCorrectly_true" classname="DefinitionTest" time="0.0"/>

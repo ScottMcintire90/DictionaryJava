@@ -30,11 +30,11 @@ public class WordTest {
     Word.clear();
     assertEquals(Word.getWords().size(), 0);
   }
-  @Test
-  public void getId_wordInstantiatesWithAnId_1() {
-    Word testWord = new Word("Example");
-    assertEquals(1, testWord.getId());
-  }
+  // @Test
+  // public void getId_wordInstantiatesWithAnId_1() {
+  //   Word testWord = new Word("Example");
+  //   assertEquals(1, testWord.getId());
+  // }
   @Test
   public void find_returnsWordWithSameId_secondWord() {
     Word firstWord = new Word("Example");
