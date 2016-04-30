@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="WordTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2016-04-30T00:07:38" hostname="Thes-iMac.local" time="0.002">
+<testsuite name="WordTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2016-04-30T16:03:26" hostname="Thes-iMac.local" time="0.002">
   <properties/>
   <testcase name="find_returnsWordWithSameId_secondWord" classname="WordTest" time="0.0"/>
+  <testcase name="getId_wordInstantiatesWithAnId_int" classname="WordTest" time="0.0"/>
   <testcase name="clear_emptiesAllWordWords_0" classname="WordTest" time="0.0"/>
   <testcase name="addDefinition_addsDefinitionToList_true" classname="WordTest" time="0.0"/>
   <testcase name="getWord_returnsAllInstancesOfWord_True" classname="WordTest" time="0.0"/>
-  <testcase name="getWords_initiallyReturnsEmptyList_ArrayList" classname="WordTest" time="0.0"/>
+  <testcase name="getWords_initiallyReturnsEmptyList_ArrayList" classname="WordTest" time="0.001"/>
   <testcase name="getWord_returnsNewWordName_Word" classname="WordTest" time="0.0"/>
-  <testcase name="word_instantiatesCorrectly_true" classname="WordTest" time="0.001"/>
+  <testcase name="word_instantiatesCorrectly_true" classname="WordTest" time="0.0"/>
   <testcase name="find_returnsNullWhenWordNotFound_Null" classname="WordTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>

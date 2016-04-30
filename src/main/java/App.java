@@ -41,21 +41,11 @@ public class App {
       Definition newDefinition = new Definition(definition);
 
       newWord.addDefinition(newDefinition);
-
+      
       model.put("definitions", newWord.getDefinitions());
-
       model.put("newWord", newWord);
       model.put("template", "templates/word.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
-
-    // get("/word/:id/new", (request, response) -> {
-    //   HashMap<String, Object> model = new HashMap<String, Object>();
-    //   Word newWord = Word.find(Integer.parseInt(request.params(":id")));
-    //   model.put("newWord", newWord);
-    //
-    //   model.put("template", "templates/word-definition-form.vtl");
-    //   return new ModelAndView(model, layout);
-    // }, new VelocityTemplateEngine());
   }
 }

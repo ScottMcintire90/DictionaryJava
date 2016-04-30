@@ -1,18 +1,18 @@
 <div class="container">
-  <h1 class="jumbotron">$newWord.getWord()</h1>
+  <h1 class="header">$newWord.getWord()</h1>
 
   <div class="col-md-6">
     <form action="/word/$newWord.getId()" method="post">
       <input id="wordId" name="wordId" type="hidden" value="$newWord.getId()">
       <div class="form-group">
-        <label for="newDefinition">Add a new definition:</label>
+        <label for="newDefinition">Add a definition:</label>
         <input id="newDefinition" name="newDefinition" type="text"></input>
       </div>
 
       <button type="submit" class="btn btn-default">Submit</button>
     </form>
     </br>
-    <a href="/">My Dictionary</a>
+    <a href="/">Back to your words</a>
   </div>
 
   <div class="col-md-6">
